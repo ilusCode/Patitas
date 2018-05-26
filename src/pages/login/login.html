@@ -1,0 +1,22 @@
+<ion-content padding class="fondo">
+  <div class="interlinea">
+    <img src="../assets/imgs/logo_fondoBlanco_Nombre.png" width="55%" height="auto" alt="" srcset="">
+  </div>
+  <ion-list>
+    <ion-item class="redondo">
+      <ion-input type="text" placeholder="Usuario" [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="password" placeholder="Contraseña" [(ngModel)]="contrasena"></ion-input>
+    </ion-item>
+    <div class="interlinea">
+      <button ion-button round (click)="entrar()">Iniciar Sesion</button>
+    </div>
+    <div class="interlinea">
+      <button ion-button round (click)="creaCuenta()">Crear Cuenta</button>
+    </div>
+    <div class="interlinea">
+      <button ion-button round (click)="olvideContrasena()">¿Olvide Contraseña?</button>
+    </div>
+  </ion-list>
+</ion-content>

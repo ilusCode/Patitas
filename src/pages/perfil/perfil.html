@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color='primary' style="opacity: 0.8; display: inline; text-align: center;">
+    <ion-title>Perfil
+      <button ion-button (click)="salir()" style="align-items:baseline">
+        <ion-icon name="md-exit"></ion-icon>
+      </button>
+    </ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="fondo">
+  <ion-list style="text-align: center;">
+    <ion-item class="redondo">
+        <ion-label>Usuario:</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario" disabled>
+      </ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+        <ion-label>Correo:</ion-label>
+        <ion-input type="email" [(ngModel)]="correo" disabled></ion-input>
+      </ion-item>
+      <ion-item class="redondo">s
+          <ion-label>Telefono:</ion-label>
+          <ion-input type="number" [(ngModel)]="tel" disabled></ion-input>
+        </ion-item>
+    <ion-item class="redondo">
+        <ion-label>Sexo:</ion-label>
+      <ion-input type="text" [(ngModel)]="sexo" disabled></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-label>Año de Nacimiento:</ion-label>
+        <ion-input type="number" [(ngModel)]="ano_nacimiento" disabled></ion-input>
+      </ion-item>
+    <ion-item class="redondo">
+      <ion-label>Contraseña:</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena" disabled placeholder=""></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="editar()"><ion-icon name="md-create"></ion-icon></button>
+</ion-fab>
+</ion-content>

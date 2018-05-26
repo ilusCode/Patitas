@@ -1,0 +1,37 @@
+<ion-content padding class="fondo">
+  <div class="interlinea">
+    <img src="/assets/imgs/logoRegistro.png" width="30%" height="auto">
+  </div>
+  <ion-list>
+    <ion-item class="redondo">
+      <ion-input type="text" [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="text" max=1 [(ngModel)]="sexo" placeholder="Sexo"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="number" [(ngModel)]="tel" placeholder="Telefono"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="number" max=9999 [(ngModel)]="ano_nacimiento" placeholder="Año de Nacimiento"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="email" [(ngModel)]="correo" placeholder="Correo"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="password" [(ngModel)]="contrasena" placeholder="Contraseña"></ion-input>
+    </ion-item>
+    <ion-item class="redondo">
+      <ion-input type="password" [(ngModel)]="conf_contrasena" placeholder="Confirmar Contraseña"></ion-input>
+    </ion-item>
+    <div class="interlinea">
+      <button ion-button round (click)="registrarse()">Registrarse</button>
+    </div>
+  </ion-list>
+</ion-content>
+
+<!-- 
+<ion-content padding class="fondo">
+ 
+ 
+-->

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color='primary' style="opacity: 0.8;">
+        <ion-title>
+            Chat
+        </ion-title>
+          <!--   <button ion-button (click)="salir()" style="align-items:baseline">
+        <ion-icon name="md-exit"></ion-icon>
+      </button>
+    -->
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-input readonly="true" [(ngModel)]="emisor"></ion-input>
+        <ion-input [(ngModel)]="receptor"></ion-input>
+        <button ion-button (click)="buscar()">
+            <ion-icon name="md-person-add"></ion-icon>
+        </button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content #content padding id="content" class="fondo">
+    <ion-card *ngFor="let message of messages">
+        <div *ngIf="message.emisor == emisor">
+            <ion-card-header>
+                {{message.emisor}} dice:
+            </ion-card-header>
+            <ion-card-content>
+                {{message.mensaje}}
+            </ion-card-content>
+        </div>
+        <div *ngIf="message.emisor != emisor">
+            <ion-card-header style="text-align: right;">
+                {{message.emisor}} dice:
+            </ion-card-header>
+            <ion-card-content style="text-align: right;">
+                {{message.mensaje}}
+            </ion-card-content>
+        </div>
+    </ion-card>
+    <div id="Contentend"></div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-input placeholder="Escribe algo..." [(ngModel)]="message"></ion-input>
+        <ion-buttons end>
+            <button ion-button icon-right (click)="sendMessages()">
+                <ion-icon name="send">
+                </ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
